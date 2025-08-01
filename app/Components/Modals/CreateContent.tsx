@@ -4,6 +4,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import styled from "styled-components";
+import Button from "../Button/Button";
+import { plus } from "@/app/utils/Icons";
 
 
 function CreateContent() {
@@ -118,10 +120,15 @@ function CreateContent() {
         />
       </div>
 
-      <div className="submit-btn">
-        <button type="submit">
-          submit
-        </button>
+      <div className="submit-btn flex justify-end">
+        <Button 
+        type="submit"
+        name="Create Task"
+        icon={plus}
+        padding={"0.8rem 2rem"}
+        borderRad={"0.8rem"}
+        background="#27AE60"
+        />
       </div>
 
     </CreateContentStyled>;
@@ -166,44 +173,44 @@ const CreateContentStyled = styled.form`
     }
   }
 
-  // .submit-btn button {
-  //   transition: all 0.35s ease-in-out;
+  .submit-btn button {
+    transition: all 0.35s ease-in-out;
 
-  //   @media screen and (max-width: 500px) {
-  //     font-size: 0.9rem !important;
-  //     padding: 0.6rem 1rem !important;
+    @media screen and (max-width: 500px) {
+      font-size: 0.9rem !important;
+      padding: 0.6rem 1rem !important;
 
-  //     i {
-  //       font-size: 1.2rem !important;
-  //       margin-right: 0.5rem !important;
-  //     }
-  //   }
+      i {
+        font-size: 1.2rem !important;
+        margin-right: 0.5rem !important;
+      }
+    }
 
-  //   i {
-  //     color: ${(props) => props.theme.colorGrey0};
-  //   }
+    i {
+      color: ${(props) => props.theme.colorGrey0};
+    }
 
-  //   &:hover {
-  //     background: ${(props) => props.theme.colorPrimaryGreen} !important;
-  //     color: ${(props) => props.theme.colorWhite} !important;
-  //   }
-  // }
+    &:hover {
+      background: ${(props) => props.theme.colorPrimaryGreen} !important;
+      color: ${(props) => props.theme.colorWhite} !important;
+    }
+  }
 
-  // .toggler {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
+  .toggler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  //   cursor: pointer;
+    cursor: pointer;
 
-  //   label {
-  //     flex: 1;
-  //   }
+    label {
+      flex: 1;
+    }
 
-  //   input {
-  //     width: initial;
-  //   }
-  // }
+    input {
+      width: initial;
+    }
+  }
 `;
 
 
